@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section id="bundles">
+	<div class="container">
+		<div class="row">
+            <div class="col-lg-12 text-center">
+            	<!-- <h2 class="section-heading">Bear Cuts</h2> -->
+            	<img src="https://i0.wp.com/www.bearcuts.co/wp-content/uploads/2015/03/bearcuts-pic-1-1-500x265.png" width="166" height="88">
+            	<h4><em>*For every purchase, we donate 4 bars of soap to under-
+served communities in St. Louis</em></h3>
+				<h4><em>*These packages designed to last an entire Semester</em></h3>
+            </div>
+    	</div>
+    	<div class="row"><br></div>
+    	<div class="row">
+    		<div class="col-sm-4">
+				  <form action="/charge" method="post">
+				    <article>
+				      	<label>The Shavers Deluxe Package | Amount: $50.00</label>
+				      	<label>• Aloe Shaving Cream</label>
+						<label>• Beard & Mustache Oil</label>
+						<label>• Moisturizer/Aftershave</label>
+						<label>• 1 Free Straight Razor Shave</label>
+				    </article>
+
+
+				    <img src="{{ url_for('static', filename = 'image12.jpeg') }}" alt="..." width="245" height="245" class="img-thumbnail">
+
+
+				    <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="{{ key }}"></script>
+				  </form>
+			</div>
+			<div class="col-sm-4">
+				  <form action="/charge1" method="post">
+				   	<article>
+				      	<label>The Healthy Hair Package | Amount: $75.00</label>
+				      	<label>• Dandruff Prevention Shampoo</label>
+				      	<label>• Daily Shampoo</label>
+				      	<label>• Daily Conditioner</label>
+						<label>• Organic Hair Conditioning Cream</label>
+						<label>• Organic Styling Clay</label>
+						<label>• 1 Free Hair Cut @ Bear Cuts</label>
+				    </article>
+				    <img src="{{ url_for('static', filename = 'image2.jpeg') }}" alt="..." width="245" height="245" class="img-thumbnail">
+				    <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="{{ key }}"></script>
+				  </form>
+			</div>
+			<div class="col-sm-4">
+				  <form action="/charge2" method="post">
+
+				      <article>
+
+				      	<label>The Grizzly’s Get Noticed Package | Amount: $50.00</label>
+				      	<label>• Sulfate-Free Hair/Face Refresher</label>
+						<label>• Peppermint Exfoliating Scrub</label>
+						<label>• Get Noticed © Cologne</label>
+						<label>• 1 Free Hair Cut @ Bear Cuts</label>
+
+				    </article>
+				    <img src="{{ url_for('static', filename = 'image123.jpeg') }}" alt="..." class="img-thumbnail" width="257" height="257">
+				    <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="{{ key }}"></script>
+				  </form>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
